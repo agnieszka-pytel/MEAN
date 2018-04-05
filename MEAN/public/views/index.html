@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MEAN - nowe podejście do aplikacji internetowych</title>
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/images/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+        <link href="css/materialize.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>		
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/materialize.min.js" type="text/javascript"></script>
+        <script src="js/jquery.scrollTo.min.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+		<script src="/app.js" type="text/javascript"></script>
+	</head>
+	<body ng-app='app' ng-controller="ContactsCtrl" id="override">
+		<header>
+			<div class="col s12 navbar-fixed">
+				<nav>
+					<div class="nav-wrapper container">
+						<a href="#" class="brand-logo"></a>
+						<ul class="right hide-on-med-and-down">
+							<li><a ng-click="$scope.content = 'mean' || !$scope.content" href="#subpage-content" target="_self">Co to jest MEAN</a></li>
+							<li><a ng-click="$scope.content = 'example'" href="#subpage-content" target="_self">Przykład aplikacji</a></li>
+							<li><a ng-click="$scope.content = 'how-to-start'" href="#subpage-content" target="_self">Jak zacząć</a></li>
+							<li><a ng-click="$scope.content = 'about'" href="#subpage-content" target="_self">O stronie</a></li>
+						</ul>
+						<a href="#" class="button-collapse"><i class="material-icons">menu</i></a>
+						<ul class="hide-on-large-only" id="mobile-menu">
+							<li><a ng-click="$scope.content = 'mean' || !$scope.content" href="#content" target="_self">Co to jest MEAN</a></li>
+							<li><a ng-click="$scope.content = 'example'" href="#content" target="_self">Przykład aplikacji</a></li>
+							<li><a ng-click="$scope.content = 'how-to-start'" href="#content" target="_self">Jak zacząć</a></li>
+							<li><a ng-click="$scope.content = 'about'" href="#content" target="_self">O stronie</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<div class="container main-content">
+			<div class="row">
+				<div class="col s12 center-align">
+					<figure class="logo">
+						<img src="images/Meanstack.jpg" alt="Logo techniki MEAN" align="middle">
+						<figcaption><a href="https://upload.wikimedia.org/wikipedia/commons/b/b1/Meanstack-624x250.jpg" alt="źródło">źródło</a></figcaption>
+					</figure>
+					<h1><b>M</b>ongoDB, <b>E</b>xpress.js, <b>A</b>ngular.js, <b>N</b>ode.js<br>nowe podejście do aplikacji internetowych</h1>
+				</div>
+			</div>
+			<div id="content">
+				<div class="row row2">
+					<a class="col s12 m6 l3 center-align" ng-class="$scope.content=='mean' || !$scope.content ? 'active' : ''" href="#subpage-content" target="_self" ng-click="$scope.content = 'mean'">
+						<i class="medium material-icons">help</i>
+						<h2>Co to jest MEAN</h2>
+					</a>
+					<a class="col s12 m6 l3 center-align" ng-class="$scope.content=='example' ? 'active' : ''" href="#subpage-content" target="_self" ng-click="$scope.content = 'example'">
+						<i class="medium material-icons">settings</i>
+						<h2>Przykład aplikacji</h2>
+					</a>
+					<a class="col s12 m6 l3 center-align" ng-class="$scope.content=='how-to-start' ? 'active' : ''" href="#subpage-content" target="_self" ng-click="$scope.content = 'how-to-start'">
+						<i class="medium material-icons">developer_mode</i>
+						<h2>Jak zacząć</h2>
+					</a>
+					<a class="col s12 m6 l3 center-align" ng-class="$scope.content=='about' ? 'active' : ''" href="#subpage-content" target="_self" ng-click="$scope.content = 'about'">
+						<i class="medium material-icons">web</i>
+						<h2>O stronie</h2>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="content" id="subpage-content">
+			<div id="mean" ng-cloak ng-if="$scope.content == 'mean' || !$scope.content" ng-include ="'mean.html'" ></div>
+			<div id="example" ng-cloak ng-if="$scope.content == 'example'" ng-include = "'example.html'"></div>
+			<div id="how-to-start" ng-cloak ng-if="$scope.content == 'how-to-start'" ng-include = "'how-to-start.html'"></div>
+			<div id="about" ng-cloak ng-if="$scope.content == 'about'" ng-include = "'about.html'"></div>
+		</div>
+		<footer>
+			<div class="row footer">
+				<div class="col s12 center-align ">Copyright &copy; 2017 Agnieszka Pytel. Wszelkie prawa zastrzeżone.</div>
+			</div>
+		</footer>
+		<script type="text/ng-template" id="about.html">
+			<div class="container">
+				<p>
+					Autorem niniejszego serwisu jest <strong>Agnieszka Pytel</strong>.
+				</p>
+				<p>
+					Serwis ten stanowi integralną część pracy licencjackiej na kierunku Elektroniczne Przetwarzanie Informacji, przygotowanej pod kierunkiem <strong>prof. dr hab. Jerzego Koniora</strong>, na Wydziale Zarządzania i&nbsp;Komunikacji Społecznej Uniwersytetu Jagiellońskiego.
+				</p>
+				<p>ŹRÓDŁA</p>
+				<ol>
+					<li>Dickey Jeff, <i>Nowoczesne aplikacje internetowe. MongoDB, Express, AngularJS, Node.js</i>, tłum.&nbsp;Robert Górczyński, Gliwice, wydawn. Helion, 2016, s.&nbsp;10-74.</li>
+					<li>Dr inż. Robert Perliński, wykład <i>MEAN Stack - Node.js, express. Tworzenie serwisów Web&nbsp;2.0</i>, Politechnika Częstochowska, 27&nbsp;lutego 2017</br><a href="http://icis.pcz.pl/~rperlinski/files/web20/MEANStack1.pdf">icis.pcz.pl/~rperlinski/files/web20/MEANStack1.pdf</a>, [dostęp 22.04.2017].</li>
+					<li>Dokumentacja JSON</br><a href="http://www.json.org/json-pl.html">www.json.org/json-pl.html</a>, [dostęp 30.05.2017].</li>
+					<li>Informatyka MIMUW, Programowanie współbieżne i&nbsp;rozproszone, wykład <i>Komunikacja synchroniczna na&nbsp;przykładzie Ady</i></br><a href="http://smurf.mimuw.edu.pl/node/1254">smurf.mimuw.edu.pl/node/1254</a>, [dostęp 22.04.2017].</li>
+				</ol>
+				<p>W&nbsp;serwisie wykorzystano grafiki z&nbsp;licencją Creative Commons, należące do domeny publicznej lub z&nbsp;pozwoleniem na udostępnianie na określonych warunkach.</p>
+			</div>
+		</script>
+		<script type="text/ng-template" id="example.html">
+			<div>
+				<h3>Aplikacja do zarządzania kontaktami</h3>
+				<div  class="contacts-app row">
+					<h4> Twoje kontakty </h4>
+					<div class="col s12 new-contact">
+						<div class="waves-effect waves-light btn add" ng-click="addContactForm = !addContactForm">Dodaj nowy kontakt</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="form-contact row" ng-hide="addContactForm">
+							  &nbsp;&nbsp;* pole nie może być puste</br></br>
+							<form ng-submit="addContact();addContactForm = !addContactForm"  id="addForm" class="addForm" name="addForm" method="post" novalidate>
+								<div  name="nameField"  ng-model= "nameField" class="input-field col s12 m6 form-group">
+									<input ng-click="$scope.id = contact._id" ng-model="name" name="name" value="" type="text" ng-pattern="regex_text" required/>
+									<label for="name" >Imię*</label>
+										<div ng-show="addForm.name.$dirty && addForm.name.$invalid || addForm.name.$error.pattern">
+										   <span ng-show="addForm.name.$error.pattern && addForm.name.$invalid " class="help-block">Pole powinno zawierać imię np. "Jan"</span>
+										   <span ng-show="addForm.name.$error.required" class="help-block">Pole nie może być puste</span>
+									   </div> 
+								</div>
+								<div class="input-field col s12 m6 form-group">
+									<input ng-click="$scope.id = contact._id" ng-model="surname" name="surname" value="" type="text" ng-pattern="regex_text" required/>
+									<label for="surname" >Nazwisko*</label>
+										<div ng-show="addForm.surname.$dirty && addForm.surname.$invalid || addForm.surname.$error.pattern">
+										   <span ng-show="addForm.surname.$error.pattern && addForm.surname.$invalid " class="help-block">Pole powinno zawierać nazwisko np. "Kowalski"</span>
+										   <span ng-show="addForm.surname.$error.required" class="help-block">Pole nie może być puste</span>
+									   </div> 
+								</div>
+								<div class="input-field col s12 m6 form-group">
+									<input ng-click="$scope.id = contact._id" ng-model="phone" name="phone" value="" type="tel" ng-pattern="regex_phone"/>
+									<label for="phone" >Telefon</label>
+										<div ng-show="addForm.phone.$dirty && addForm.phone.$invalid || addForm.phone.$error.pattern">
+										   <span ng-show="addForm.phone.$error.pattern && addForm.phone.$invalid " class="help-block">np. +48623453434, bez spacji</span>
+									   </div> 
+								</div>
+								<div class="input-field col s12 m6 form-group">
+									<input ng-click="$scope.id = contact._id" ng-model="email" name="email" type="email"  value="" ng-pattern="regex_email"/>
+									<label for="email" >Adres email</label>
+										<div ng-show="addForm.email.$dirty && addForm.email.$invalid || addForm.email.$error.pattern">
+										   <span ng-show="addForm.email.$error.pattern && addForm.email.$invalid " class="help-block">np. jan.kowalski@gmail.com</span>
+									   </div> 
+								</div>
+								<div class="col s12">
+									<input type="submit" ng-disabled="addForm.name.$invalid || addForm.surname.$invalid || addForm.phone.$invalid || addForm.email.$invalid"  class="waves-effect waves-light btn add-contact" value="Dodaj"/>
+								</div>
+							</form>
+						<div class="clearfix"></div>
+					</div>
+					<div ng-if="!contacts.length">Brak kontaktów do wyświetlenia. Dodaj nowe kontakty.</div>
+					<ul ng-if="contacts.length" class="collection">
+						<li  ng-repeat="contact1 in contacts | orderBy:'name':reverse " class="collection-item" ng-class="contact1._id">
+							<div class="col-left">
+								<div class=""><strong>{{ contact1.name }} {{ contact1.surname }}</strong></div>
+								<div class="" ng-if="contact1.phone"><strong>Tel.:</strong> {{ contact1.phone }}</div>
+								<div class="" ng-if="contact1.email"><strong>E-mail:</strong> {{ contact1.email }}</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="col-right">
+								<div class="actions">
+									<div class="waves-effect waves-light btn delete" ng-click="hideAddContactForm();deleteContact( contact1._id )">
+										<i class="medium material-icons">delete</i><div class="hide">Usuń</div>
+									</div>
+									<div class="waves-effect waves-light btn edit"  ng-click="$scope.id = contact1._id;hideAddContactForm()"><i class="medium material-icons">mode_edit</i><div class="hide">Edytuj</div></div>
+								</div>			
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-contact row" ng-hide="$scope.id != contact1._id"></br></br>
+								<form ng-submit="$scope.id = null;editContact( contact1._id )" ng-attr-id="{{ contact1._id }}" class="editForm" name="editForm" ng-model="editForm" method="post">
+									<div class="input-field col s12 m6">
+										<input  ng-click="$scope.id = contact1._id" ng-model="name2" name="name2" placeholder="{{ contact1.name }}" value="{{ contact1.name }}" type="text" ng-pattern="regex_text"/>
+										<label class="active" for="name" >Imię</label>
+										<div ng-show="editForm.name2.$dirty && editForm.name2.$invalid || editForm.name2.$error.pattern">
+										   <span ng-show="editForm.name2.$error.pattern && editForm.name2.$invalid " class="help-block">Pole powinno zawierać imię np. "Jan"</span>
+									   </div> 
+									</div>
+									<div class="input-field col s12 m6">
+										<input ng-click="$scope.id = contact1._id" ng-model="surname2" name="surname2" placeholder="{{ contact1.surname }}" value="{{ contact1.surname }}" type="text" ng-pattern="regex_text"/>
+										<label class="active" for="surname2" >Nazwisko</label>
+										<div ng-show="editForm.surname2.$dirty && editForm.surname2.$invalid || editForm.surname2.$error.pattern">
+										   <span ng-show="editForm.surname2.$error.pattern && editForm.surname2.$invalid " class="help-block">Pole powinno zawierać nazwisko np. "Kowalski"</span>
+									   </div> 
+									</div>
+									<div class="input-field col s12 m6">
+										<input ng-click="$scope.id = contact1._id" ng-model="phone2" name="phone2" placeholder="{{ contact1.phone }}" value="{{ contact1.phone }}" type="tel" ng-pattern="regex_phone"/>
+										<label class="active" for="phone2" >Telefon</label>
+										<div ng-show="editForm.phone2.$dirty && editForm.phone2.$invalid || editForm.phone2.$error.pattern">
+										   <span ng-show="editForm.phone2.$error.pattern && editForm.phone2.$invalid " class="help-block">np. +48623453434, bez spacji</span>
+									   </div> 
+									</div>
+									<div class="input-field col s12 m6">
+										<input ng-click="$scope.id = contact1._id" ng-model="email2" name="email2" placeholder="{{ contact1.email }}" value="{{ contact1.email }}" type="email" ng-pattern="regex_email"/>
+										<label class="active" for="email2" >Adres email</label>
+										<div ng-show="editForm.email2.$dirty && editForm.email2.$invalid || editForm.email2.$error.pattern">
+										   <span ng-show="editForm.email2.$error.pattern && editForm.email2.$invalid " class="help-block">np. jan.kowalski@gmail.com</span>
+									   </div> 
+									</div>
+									{{ editForm.name }}
+									<div class="col s12">
+										<input type="submit" ng-disabled="editForm.name2.$invalid || editForm.surname2.$invalid || editForm.phone2.$invalid || editForm.email2.$invalid" class="waves-effect waves-light btn edit-contact" value="Zapisz"/>
+									</div>
+									<div class="clearfix"></div>
+								</form>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</script>
+		<script type="text/ng-template" id="how-to-start.html">
+			<div class="row">
+				<div class="col s12">
+					<h3>Nauka języka JavaScript</h3>
+					<p>Wszystkie narzędzia stosu MEAN napisane są w&nbsp;języku JavaScript. Aby sprawnie tworzyć aplikacje MEAN warto na początku poświęcić czas na naukę tego języka. Pozwoli to na łatwiejsze opanowanie wszystkich elementów stosu MEAN i&nbsp;dogłębne zrozumienie aplikacji.</p>
+					<p>Istnieje wiele kursów i&nbsp;tutoriali internetowych dotyczących zarówno JavaScript, jak i&nbsp;stosu MEAN. Warte uwagi są przede wszystkim:</p> 
+					<ul>
+						<li><a href="https://www.w3schools.com/js/">Tutorial JavaScript - w3schools.com,</a></li>
+						<li><a href="https://www.codecademy.com/learn/learn-javascript">Kurs JavaScript - Codecademy,</a></li>
+						<li><a href="https://www.codeschool.com/learn/javascript">Kurs JavaScript - Code School,</a></li>
+						<li><a href="https://www.codeschool.com/mean">Kurs MEAN - Code School.</a></li>
+					</ul>
+				</div>
+				<div class="col s12">
+					<h3>Instalacja narzędzi stosu MEAN</h3>
+					<p>Jedynie AngularJS nie wymaga instalacji. Wystarczy dołączyć go do aplikacji podobnie jak jQuery, za pomocą atrybutu <code>&lt;script&gt;&lt;/script&gt;</code>.</p>
+					<p>MongoDB oraz Node.js muszą być zainstalowane w&nbsp;środowisku, gdzie powstaje aplikacja. W&nbsp;przypadku tego serwisu jest to serwer Uniwersytetu Jagiellońskiego oparty na systemie operacyjnym Linux. </p>
+					<p>Sposób instalacji komponentów różni się w&nbsp;zależności od używanego systemu operacyjnego. Dla użytkowników systemów Linux Ubuntu13+:</p>
+					<code class="snippet">sudo apt-get install npm</code>
+					<p>W przypadku instalacji MongoDB nie należy korzystać z&nbsp;polecenia <code>apt-get</code>, gdyż najprawdopodobniej zostanie zainstalowana nieaktualna wersja narzędzia.</p>
+					<p>Aby zainstalować Node.js na innym systemie, należy odszukać odpowiednią opcję na stronie <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>. Również w&nbsp;przypadku MongoDB przed instalacją najlepiej zapoznać się z&nbsp;dokumentacją znajdującą się na stronie <a href="https://docs.mongodb.com/manual/installation/">https://docs.mongodb.com/manual/installation/</a>.</p>
+					<p>Express.js jest pakietem Node.js. Aby zacząć go używać, po zainstalowaniu <code>npm</code> wystarczy wydać polecenie:</p>
+					<code>npm install --save express</code>
+					<p>Opcja  <code>--save</code> powoduje automatyczne uaktualnienie zależności w pliku konfiguracyjnym Node.js - <code>package.json</code>. W&nbsp;przypadku jej pomnięcia, należałoby ręcznie aktualizować zawartość pliku.</p>
+					<p>Po zainstalowaniu wszystkich narzędzi można przystąpić do tworzenia aplikacji MEAN.</p>
+				</div>
+			</div>
+		</script>
+		<script type="text/ng-template" id="mean.html">
+			<div class="row">
+					<h3>Stos MEAN</h3>
+				<div class="col s12 mean-about">
+					<p>MEAN to stos oprogramowania typu otwartego źródła. Oznacza to, że każdy, kto chce, może korzystać z&nbsp;kodu źródłowego i&nbsp;przyczynić się do jego rozwoju, na przykład dodając nową funkcjonalność lub ulepszając już istniejącą. MEAN jest zestawem czterech narzędzi:</p>
+					<ul>
+						<li> MongoDB,</li>
+						<li> Express.js,</li>
+						<li> AngularJS,</li>
+						<li> Node.js</li>
+					</ul>
+					<p>Tradycyjne aplikacje internetowe od początku swojego istnienia, również obecnie w&nbsp;wielu przypadkach, budowane są za pomocą stosu LAMP. Analogicznie do MEAN stos LAMP składa się z&nbsp;czterech narzędzi:</p>
+					<ul>
+						<li>  Linux (system operacyjny),</li>
+						<li>  Apache (serwer HTTP ),</li>
+						<li>  MySQL lub MariaDB (systemy zarządzania bazą danych),</li>
+						<li>  PHP, Python lub Perl (języki skryptowe obsługujące komunikację z&nbsp;bazą danych).</li>
+					</ul>
+					
+					<p>Tworzenie tradycyjnych aplikacji internetowych, oprócz znajomości HTML oraz CSS, wymaga sprawności w&nbsp;posługiwaniu się wieloma językami. Innych umiejętności wymaga wyszukanie danych w&nbsp;bazie danych SQL, innych administracja serwera HTTP, jeszcze innych sprawna obsługa zadań realizowanych przez aplikację i&nbsp;komunikujących się z bazą danych. Dodatkowo aby dopracować stronę wizualną serwisu oraz zaimplementować interakcje z&nbsp;użytkownikiem, wymagana jest znajomość różnych frameworków CSS i&nbsp;JavaScript. Zespoły programistów tworzące takie aplikacje mają zwykle po kilka, a&nbsp;czasem nawet kilkanaście osób, gdyż jest prawie niemożliwe, żeby jedna osoba opanowała wszystkie potrzebne umiejętności w&nbsp;wystarczającym stopniu.</p>
+
+					<p>Programiści zaczęli szukać rozwiązania tego problemu i&nbsp;tak narodziła się technologia MEAN. Wszystkie jej komponenty napisane są w&nbsp;jednym języku – JavaScript. Oczywiście obsługa żądań HTTP wymaga użycia innych poleceń niż zwykłe wyświetlenie treści strony. Potrzeba dostosowania JavaScript do obsługi tak zróżnicowanych zadań spowodowała rozwój języka i&nbsp;pozwoliła w&nbsp;pełni odkryć jego potencjał.</p><br/>
+					
+					<h3>Komunikacja synchroniczna w&nbsp;aplikacji</h3>
+					<p>Tradycyjne aplikacje internetowe tworzone za pomocą stosu LAMP wykorzystują komunikację synchroniczną. Oznacza to, że w&nbsp;danym momencie po stronie serwera może być wykonywane tylko jedno zadanie – kolejna operacja może zacząć się dopiero, kiedy poprzednia się zakończy. Przykładowo, jeżeli użytkownik kliknął przycisk wysłania formularza i&nbsp;zaraz potem kliknął w menu odnośnik do innej strony, przeładowanie strony nie rozpocznie się, dopóki nie zostanie zakończone zadanie wysyłania danych z&nbsp;formularza. Jest to niewątpliwie wada komunikacji synchronicznej, która przesądziła o&nbsp;odejściu od tej technologii.</p><br/>
+					
+					<h3>AJAX, asynchroniczne przesyłanie danych i&nbsp;aplikacje sterowane zdarzeniami</h3>
+					<p>Rozwiązaniem problemu komunikacji synchronicznej jest koncepcja AJAX, wykorzystująca komunikację asynchroniczną i&nbsp;sterowanie zdarzeniami. W&nbsp;aplikacjach wykorzystujących AJAX operacje wywołane przez działania użytkownika są wykonywane „w&nbsp;tle” - kilka żądań może być obsługiwanych jednocześnie, gdyż serwer nie musi czekać z&nbsp;rozpoczęciem zadania do czasu aż zakończy się poprzednie. Skraca to czas obsługi danego żądania i&nbsp;pozytywnie wpływa na doświadczenie użytkownika podczas korzystania z aplikacji. </p>
+					<p>Aplikacje sterowane zdarzeniami umożliwiają jednoczesne wykonywanie wielu zadań, co powoduje znaczące zwiększenie wydajności aplikacji w&nbsp;porównaniu do tradycyjnych aplikacji sterowanych żądaniami i&nbsp;opartych na komunikacji synchronicznej. Asynchroniczność jest kluczowa w&nbsp;kwestii interakcji z&nbsp;użytkownikiem. Obecnie użytkownicy stron i&nbsp;aplikacji internetowych oczekują natychmiastowej reakcji na swoje działania na stronie. Jeżeli są zmuszeni długo czekać na przeładowanie strony czy wysłanie formularza, rośnie prawdopodobieństwo, że opuszczą aplikację od razu, nie czekając na zakończenie operacji, lub w&nbsp;przyszłości zupełnie zaprzestaną korzystania z&nbsp;tej aplikacji. </p>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col s12 mean-elements">
+					<div class="col s12">
+						<h3>Elementy stosu MEAN</h3>
+					</div>
+					<div class="mongo">
+						<div class="col s8">
+							<figure>
+								<img src="images/mongo.png" alt="MongoDB" align="middle">
+								<figcaption><a href="https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg" alt="źródło">źródło</a></figcaption>
+							</figure>
+						</div>
+						<div class="col s12">
+							<h4>MongoDB</h4>
+							<p>MongoDB jest to darmowa, otwarta baza danych NoSQL. Wielką zaletą MongoDB jest możliwość rozpoczęcia pracy bez wcześniejszego przygotowania struktury i&nbsp;relacji danych – przykładowo, aby stworzyć nową bazę danych, wystarczy po prostu zacząć jej używać. W&nbsp;relacyjnych systemach baz danych taka operacja byłaby niemożliwa bez uprzedniego zdefiniowania bazy danych, której chcielibyśmy użyć.</p>
+							<p>W&nbsp;MongoDB zamiast tradycyjnych tabel i&nbsp;rekordów, które można znaleźć w relacyjnych bazach danych, znajdują się kolekcje oraz dokumenty. Kolekcje można przyrównać do tabeli, jednak dokumenty w&nbsp;porównaniu do rekordów mogą zawierać o&nbsp;wiele więcej danych. W&nbsp;bazach SQL kładzie się wielki nacisk na normalizację, czyli maksymalne wyeliminowanie redundancji  danych, stąd na przykład informacje na temat jednego użytkownika przechowywane są w&nbsp;kilku tabelach. W&nbsp;MongoDB liczy się prostota użytkowania - wszystkie dane dotyczące danego obiektu przechowywane są w&nbsp;jednym dokumencie. Redundancję danych rekompensuje fakt, że dane z&nbsp;dokumentów wczytywane są dużo szybciej niż dane z&nbsp;tabeli.</p>
+							<p>W&nbsp;bazach NoSQL dane przechowywane są w&nbsp;postaci obiektów zapisywanych w&nbsp;dokumentach w&nbsp;formacie JSON&nbsp;(BSON) . JSON jest łatwym do odczytania oraz wygenerowania przez komputery i&nbsp;jednocześnie zrozumiałym dla ludzi formatem wymiany danych. Wykorzystuje uniwersalne struktury danych, wykorzystywane w&nbsp;wielu językach programowania, takich jak JavaScript, PHP czy Python.</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="express">
+						<div class="col s8">
+							<figure>
+								<img src="images/express.png" alt="Express.js" align="middle">
+								<figcaption><a href="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png"alt="źródło">źródło</a></figcaption>
+							</figure>
+						</div>
+						<div class="col s12">
+							<h4>Express.js</h4>
+							<p>Express.js, nazywany często po prostu Express, to pakiet npm , który wspomaga tworzenie aplikacji po stronie serwera WWW. Express zapewnia dużo większą przejrzystość kodu niż czysty Node.js (patrz niżej), umożliwia łatwą komunikację z&nbsp;bazami danych opartymi na dokumentach, pozwala na łatwą konfigurację ścieżek, a&nbsp;także ułatwia implementację takich zadań jak logowanie czy autoryzacja użytkowników. </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="angular">
+						<div class="col s8">
+							<figure>
+							<img src="images/angular.png" alt="AngularJS" align="middle">
+								<figcaption><a href="https://upload.wikimedia.org/wikipedia/commons/c/ca/AngularJS_logo.svg" alt="źródło">źródło</a></figcaption>
+							</figure>
+						</div>
+						<div class="col s12">
+							<h4>AngularJS</h4>
+							<p>AngularJS to framework do tworzenia aplikacji internetowych, które charakteryzują się dużą interaktywnością.  Działa w&nbsp;stylu deklaratywnym, w&nbsp;odróżnieniu od popularnej bilioteki  JavaScript - jQuery. Oznacza to, że na początku deklaruje się, jak ma wyglądać struktura strony, a&nbsp;dopiero potem ta struktura jest generowana. jQuery pozwala dodać zachowania jedynie do już zdefiniowanych elementów dokumentu hipertekstowego.</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="node">
+						<div class="col s8">
+							<figure>
+								<img src="images/node.png" alt="Node.js" align="middle">
+								<figcaption><a href="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png" alt="źródło">źródło</a></figcaption>
+							</figure>
+						</div>
+						<div class="col s12">
+							<h4>Node.js</h4>
+							<p>Node.js jest otwartym frameworkiem JavaScript, który umożliwia tworzenie aplikacji sterowanych zdarzeniami wykorzystujących komunikację asynchroniczną. Wykorzystywany jest do obsługi aplikacji po stronie serwera. Za jego pomocą można m.in. stworzyć własny serwer HTTP, na którym ma działać dana aplikacja.</p>		
+						</div>
+					</div>
+				</div>
+			</div>
+		</script>
+	</body>
+</html>
